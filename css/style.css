@@ -1085,8 +1085,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-    .hero-visual { display: none; }
+@media (max-width: 1200px)
+ {.hero-visual { display: flex; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonials-slider { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
