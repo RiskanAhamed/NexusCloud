@@ -3,7 +3,7 @@
 > The next generation cloud platform for modern businesses.
 
 ## 🌐 Live Demo
-[riskanahamed.github.io/Project](https://riskanahamed.github.io/Project)
+[riskanahamed.github.io/Project](https://riskanahamed.github.io/NexusCloud)
 
 ## 📌 About
 NexusCloud is a modern cloud computing platform UI built with HTML, CSS, and JavaScript. It features a dark futuristic design with interactive particle animations, glassmorphism effects, and smooth scroll animations.
