@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - NexusCloud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        .services-hero { padding: 150px 5% 80px; text-align: center; position: relative; }
+        .services-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 20px; }
+        .services-hero p { color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+        .services-categories { padding: 80px 5%; }
+        .category-tabs { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 60px; }
+        .category-tab { padding: 15px 30px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 50px; color: var(--text-muted); cursor: pointer; transition: all 0.3s; }
+        .category-tab:hover, .category-tab.active { background: var(--gradient); color: white; border-color: transparent; }
+        .services-showcase { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .service-showcase-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 24px; padding: 40px; transition: all 0.4s; }
+        .service-showcase-card:hover { transform: translateY(-15px); border-color: var(--primary); box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2); }
+        .showcase-icon { width: 80px; height: 80px; background: var(--gradient); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 25px; }
+        .service-showcase-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .service-showcase-card > p { color: var(--text-muted); margin-bottom: 25px; }
+        .service-features { list-style: none; margin-bottom: 30px; }
+        .service-features li { padding: 10px 0; color: var(--text-muted); display: flex; align-items: center; gap: 12px; }
+        .service-features li i { color: var(--secondary); }
+        .service-price { font-family: 'Orbitron'; font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; }
+        .service-price span { font-size: 1rem; color: var(--text-muted); font-family: 'Inter'; }
+        .service-btn { display: inline-block; width: 100%; text-align: center; background: var(--gradient); color: white; padding: 15px; border-radius: 12px; font-weight: 600; transition: all 0.3s; }
+        .service-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4); color: white; }
+        .comparison-section { padding: 80px 5%; background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.05)); }
+        .comparison-table { max-width: 1200px; margin: 0 auto; overflow-x: auto; }
+        .comparison-table table { width: 100%; border-collapse: collapse; background: var(--glass); border-radius: 16px; overflow: hidden; }
+        .comparison-table th, .comparison-table td { padding: 20px; text-align: left; border-bottom: 1px solid var(--glass-border); }
+        .comparison-table th { background: rgba(0, 0, 0, 0.3); font-family: 'Orbitron'; font-weight: 600; }
+        .comparison-table td { color: var(--text-muted); }
+        .comparison-table .check { color: var(--secondary); }
+        .comparison-table .cross { color: #ef4444; }
+        @media (max-width: 1024px) { .services-showcase { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .services-showcase { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="dark-theme">
+    <canvas id="particles-canvas"></canvas>
+    
+    <nav class="floating-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-cloud"></i></span>
+                <span class="logo-text">NEXUS<span class="highlight">CLOUD</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="#" class="nav-cta">Launch App</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="services-hero">
+        <div class="section-header">
+            <span class="section-badge">Services</span>
+            <h1 class="gradient-text">Cloud Services</h1>
+            <p>Enterprise-grade cloud services designed for modern businesses. Scale infinitely with our cutting-edge infrastructure.</p>
+        </div>
+    </section>
+
+    <section class="services-categories">
+        <div class="category-tabs">
+            <span class="category-tab active">All Services</span>
+            <span class="category-tab">Compute</span>
+            <span class="category-tab">Storage</span>
+            <span class="category-tab">Database</span>
+            <span class="category-tab">Network</span>
+            <span class="category-tab">Security</span>
+        </div>
+
+        <div class="services-showcase">
+            <div class="service-showcase-card">
+                <div class="showcase-icon"><i class="fas fa-server"></i></div>
+                <h3>Cloud Servers</h3>
+                <p>High-performance virtual servers with dedicated CPU cores and NVMe SSD storage.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Up to 64 CPU Cores</li>
+                    <li><i class="fas fa-check"></i> NVMe SSD Storage</li>
+                    <li><i class="fas fa-check"></i> DDoS Protection</li>
+                    <li><i class="fas fa-check"></i> 99.99% Uptime</li>
+                </ul>
+                <div class="service-price">$29<span>/month</span></div>
+                <a href="#" class="service-btn">Get Started</a>
+            </div>
+
+            <div class="service-showcase-card">
+                <div class="showcase-icon"><i class="fas fa-database"></i></div>
+                <h3>Managed Databases</h3>
+                <p>Fully managed databases with automatic backups, failover, and scaling.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> PostgreSQL & MySQL</li>
+                    <li><i class="fas fa-check"></i> Redis Caching</li>
+                    <li><i class="fas fa-check"></i> Auto Scaling</li>
+                    <li><i class="fas fa-check"></i> Point-in-Time Recovery</li>
+                </ul>
+                <div class="service-price">$49<span>/month</span></div>
+                <a href="#" class="service-btn">Get Started</a>
+            </div>
+
+            <div class="service-showcase-card">
+                <div class="showcase-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Object Storage</h3>
+                <p>Scalable object storage with global CDN and advanced lifecycle policies.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Unlimited Storage</li>
+                    <li><i class="fas fa-check"></i> Global CDN</li>
+                    <li><i class="fas fa-check"></i> Versioning</li>
+                    <li><i class="fas fa-check"></i> $0.02/GB</li>
+                </ul>
+                <div class="service-price">$5<span>/month</span></div>
+                <a href="#" class="service-btn">Get Started</a>
+            </div>
+
+            <div class="service-showcase-card">
+                <div class="showcase-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>CDN & Edge</h3>
+                <p>Global content delivery network with edge computing capabilities.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> 150+ Edge Locations</li>
+                    <li><i class="fas fa-check"></i> Edge Functions</li>
+                    <li><i class="fas fa-check"></i> Smart Cache</li>
+                    <li><i class="fas fa-check"></i> <10ms Latency</li>
+                </ul>
+                <div class="service-price">$0<span>/month</span></div>
+                <a href="#" class="service-btn">Get Started</a>
+            </div>
+
+            <div class="service-showcase-card">
+                <div class="showcase-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Security Suite</h3>
+                <p>Comprehensive security with WAF, DDoS protection, and compliance tools.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Web Application Firewall</li>
+                    <li><i class="fas fa-check"></i> DDoS Mitigation</li>
+                    <li><i class="fas fa-check"></i> SSL/TLS Certificates</li>
+                    <li><i class="fas fa-check"></i> Compliance Reports</li>
+                </ul>
+                <div class="service-price">$99<span>/month</span></div>
+                <a href="#" class="service-btn">Get Started</a>
+            </div>
+
+            <div class="service-showcase-card">
+                <div class="showcase-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Container Registry</h3>
+                <p>Private container registry with built-in CI/CD integration.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Unlimited Images</li>
+                    <li><i class="fas fa-check"></i> Auto Scanning</li>
+                    <li><i class="fas fa-check"></i> Webhook Support</li>
+                    <li><i class="fas fa-check"></i> Role-Based Access</li>
+                </ul>
+                <div class="service-price">$15<span>/month</span></div>
+                <a href="#" class="service-btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="section-header">
+            <span class="section-badge">Compare</span>
+            <h2 class="section-title">Service Comparison</h2>
+        </div>
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Starter</th>
+                        <th>Professional</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CPU Cores</td>
+                        <td>2</td>
+                        <td>8</td>
+                        <td>64</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>32 GB</td>
+                        <td>256 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>50 GB</td>
+                        <td>500 GB</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Bandwidth</td>
+                        <td>1 TB</td>
+                        <td>10 TB</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>CDN</td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>DDoS Protection</td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>24/7 Support</td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>SLA</td>
+                        <td>99.5%</td>
+                        <td>99.9%</td>
+                        <td>99.99%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a Custom Solution?</h2>
+                <p>Contact our team for personalized cloud architecture design</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-cta-primary">
+                        <span>Contact Sales</span>
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-cloud"></i> NEXUSCLOUD
+                    </a>
+                    <p>The next generation cloud platform for modern businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexusCloud. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

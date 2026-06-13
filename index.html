@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusCloud - The Future of Cloud Computing</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dark-theme">
+    <!-- Particle Canvas Background -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-cloud"></i></span>
+                <span class="logo-text">NEXUS<span class="highlight">CLOUD</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="#" class="nav-cta">Launch App</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Anti-Gravity Effect -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="floating-badge" data-aos="fade-down" data-aos-delay="200">
+                <i class="fas fa-rocket"></i> Now in Beta v3.0
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+                <span class="title-line">The Future of</span>
+                <span class="gradient-text">Cloud Computing</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+                Experience next-generation infrastructure with quantum-ready servers, 
+                AI-powered management, and infinite scalability.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+                <a href="#" class="btn-primary">
+                    <span>Get Started Free</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Watch Demo</span>
+                </a>
+            </div>
+            
+            <!-- Floating Stats Cards -->
+            <div class="stats-container">
+                <div class="stat-card floating" data-aos="flip-up" data-aos-delay="1000">
+                    <div class="stat-icon"><i class="fas fa-server"></i></div>
+                    <div class="stat-value">99.99%</div>
+                    <div class="stat-label">Uptime SLA</div>
+                </div>
+                <div class="stat-card floating" data-aos="flip-up" data-aos-delay="1200">
+                    <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                    <div class="stat-value">150+</div>
+                    <div class="stat-label">Edge Locations</div>
+                </div>
+                <div class="stat-card floating" data-aos="flip-up" data-aos-delay="1400">
+                    <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="stat-value">&lt;10ms</div>
+                    <div class="stat-label">Latency</div>
+                </div>
+                <div class="stat-card floating" data-aos="flip-up" data-aos-delay="1600">
+                    <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="stat-value">Zero</div>
+                    <div class="stat-label">Data Breach</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero Visual - Floating Cloud Illustration -->
+        <div class="hero-visual">
+            <div class="cloud-illustration">
+                <div class="orbit orbit-1">
+                    <div class="satellite satellite-1"></div>
+                </div>
+                <div class="orbit orbit-2">
+                    <div class="satellite satellite-2"></div>
+                </div>
+                <div class="orbit orbit-3">
+                    <div class="satellite satellite-3"></div>
+                </div>
+                <div class="core-server">
+                    <div class="server-glow"></div>
+                    <div class="server-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section with Glassmorphism -->
+    <section class="features-section">
+        <div class="section-header">
+            <span class="section-badge" data-aos="fade-down">Features</span>
+            <h2 class="section-title" data-aos="fade-up">Built for the Next Decade</h2>
+            <p class="section-desc" data-aos="fade-up" data-aos-delay="200">
+                Revolutionary technology meets intuitive design
+            </p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card glassmorphism" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI-Powered</h3>
+                <p>Smart resource allocation and predictive scaling using advanced machine learning</p>
+                <div class="feature-tag">Machine Learning</div>
+            </div>
+            
+            <div class="feature-card glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h3>Infinite Scale</h3>
+                <p>Automatically scale from zero to millions of requests without configuration</p>
+                <div class="feature-tag">Auto-Scaling</div>
+            </div>
+            
+            <div class="feature-card glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Quantum Security</h3>
+                <p>Post-quantum encryption and zero-trust architecture for maximum protection</p>
+                <div class="feature-tag">Security</div>
+            </div>
+            
+            <div class="feature-card glassmorphism" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Edge Computing</h3>
+                <p>Deploy at the edge for ultra-low latency and real-time processing</p>
+                <div class="feature-tag">Edge Network</div>
+            </div>
+            
+            <div class="feature-card glassmorphism" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h3>GitOps Ready</h3>
+                <p>Infrastructure as code with built-in CI/CD and version control</p>
+                <div class="feature-tag">DevOps</div>
+            </div>
+            
+            <div class="feature-card glassmorphism" data-aos="fade-up" data-aos-delay="600">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Real-Time Analytics</h3>
+                <p>Live monitoring with customizable dashboards and instant alerts</p>
+                <div class="feature-tag">Analytics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard Preview -->
+    <section class="dashboard-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-aos="fade-down">Dashboard</span>
+                <h2 class="section-title" data-aos="fade-up">Command Your Cloud</h2>
+            </div>
+            
+            <div class="dashboard-mockup" data-aos="zoom-in" data-aos-delay="300">
+                <div class="dashboard-header">
+                    <div class="dash-title">
+                        <i class="fas fa-chart-pie"></i> Resource Overview
+                    </div>
+                    <div class="dash-actions">
+                        <button class="dash-btn"><i class="fas fa-sync-alt"></i></button>
+                        <button class="dash-btn"><i class="fas fa-cog"></i></button>
+                    </div>
+                </div>
+                <div class="dashboard-body">
+                    <div class="metrics-row">
+                        <div class="metric-box">
+                            <div class="metric-label">CPU Usage</div>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 67%"></div>
+                            </div>
+                            <div class="metric-value">67%</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Memory</div>
+                            <div class="metric-bar">
+                                <div class="metric-fill memory" style="width: 45%"></div>
+                            </div>
+                            <div class="metric-value">45%</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Storage</div>
+                            <div class="metric-bar">
+                                <div class="metric-fill storage" style="width: 23%"></div>
+                            </div>
+                            <div class="metric-value">23%</div>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder">
+                        <div class="chart-line">
+                            <div class="chart-bar" style="height: 40%"></div>
+                            <div class="chart-bar" style="height: 65%"></div>
+                            <div class="chart-bar" style="height: 45%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 55%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                            <div class="chart-bar" style="height: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Services Section -->
+    <section class="services-section">
+        <div class="floating-clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-right">
+                    <div class="service-visual">
+                        <div class="floating-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Cloud Servers</h3>
+                        <p>High-performance VPS with dedicated resources</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> NVMe SSD Storage</li>
+                            <li><i class="fas fa-check"></i> Dedicated CPU Cores</li>
+                            <li><i class="fas fa-check"></i> DDoS Protection</li>
+                        </ul>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-visual">
+                        <div class="floating-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Database Clusters</h3>
+                        <p>Managed databases with automatic failover</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Auto-Scaling</li>
+                            <li><i class="fas fa-check"></i> Point-in-Time Recovery</li>
+                            <li><i class="fas fa-check"></i> Multi-Region Replication</li>
+                        </ul>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-aos="fade-left">
+                    <div class="service-visual">
+                        <div class="floating-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="service-info">
+                        <h3>CDN & Edge</h3>
+                        <p>Global content delivery network</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 150+ Edge Locations</li>
+                            <li><i class="fas fa-check"></i> Smart Cache</li>
+                            <li><i class="fas fa-check"></i> Edge Functions</li>
+                        </ul>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials with Parallax -->
+    <section class="testimonials-section">
+        <div class="parallax-bg"></div>
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-badge" data-aos="fade-down">Testimonials</span>
+                <h2 class="section-title" data-aos="fade-up">Trusted by Industry Leaders</h2>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card glassmorphism" data-aos="flip-left" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        "NexusCloud transformed our infrastructure. We achieved 300% performance improvement and reduced costs by 60%."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Kim</div>
+                            <div class="author-role">CTO, TechVentures Inc</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glassmorphism" data-aos="flip-left" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        "The AI-powered scaling saved us during peak traffic. No more server crashes during product launches!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <div class="author-name">Mike Rodriguez</div>
+                            <div class="author-role">Lead Engineer, DataFlow</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glassmorphism" data-aos="flip-left" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        "Quantum-ready security gives us peace of mind. Compliance has never been easier."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EJ</div>
+                        <div class="author-info">
+                            <div class="author-name">Emma Johnson</div>
+                            <div class="author-role">Security Lead, FinanceHub</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Floating Elements -->
+    <section class="cta-section">
+        <div class="floating-elements">
+            <div class="float-element fe-1"><i class="fas fa-cloud"></i></div>
+            <div class="float-element fe-2"><i class="fas fa-server"></i></div>
+            <div class="float-element fe-3"><i class="fas fa-shield-alt"></i></div>
+            <div class="float-element fe-4"><i class="fas fa-bolt"></i></div>
+        </div>
+        
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Launch?</h2>
+                <p>Start your journey to the future of cloud computing</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-cta-primary">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#" class="btn-cta-secondary">
+                        <span>Contact Sales</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-cloud"></i> NEXUSCLOUD
+                    </a>
+                    <p>The next generation cloud platform for modern businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexusCloud. All rights reserved.</p>
+                <div class="footer-status">
+                    <span class="status-dot"></span> All systems operational
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>
