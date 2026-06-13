@@ -1,1 +1,119 @@
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6366f1"/>
+            <stop offset="100%" style="stop-color:#06b6d4"/>
+        </linearGradient>
+        
+        <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.5"/>
+            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+        </linearGradient>
+        
+        <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#818cf8"/>
+            <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+        </linearGradient>
+        
+        <!-- Filters -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="30" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="800" height="600" fill="#050508"/>
+    
+    <!-- Nebula Background -->
+    <ellipse cx="400" cy="300" rx="300" ry="200" fill="url(#glowGradient)" opacity="0.3"/>
+    <ellipse cx="200" cy="200" rx="150" ry="150" fill="#6366f1" opacity="0.1" filter="url(#softGlow)"/>
+    <ellipse cx="600" cy="400" rx="200" ry="150" fill="#06b6d4" opacity="0.1" filter="url(#softGlow)"/>
+    
+    <!-- Orbit Rings -->
+    <circle cx="400" cy="300" r="180" fill="none" stroke="url(#ringGradient)" stroke-width="2" opacity="0.3">
+        <animate attributeName="r" values="180;200;180" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="300" r="140" fill="none" stroke="url(#ringGradient)" stroke-width="2" opacity="0.2">
+        <animate attributeName="r" values="140;155;140" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="300" r="100" fill="none" stroke="url(#ringGradient)" stroke-width="2" opacity="0.4">
+        <animate attributeName="r" values="100;110;100" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Satellite 1 -->
+    <circle cx="400" cy="120" r="12" fill="url(#primaryGradient)" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Satellite 2 -->
+    <circle cx="580" cy="300" r="10" fill="url(#primaryGradient)" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="30s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Satellite 3 -->
+    <circle cx="400" cy="480" r="14" fill="url(#primaryGradient)" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Core Server -->
+    <rect x="340" y="260" width="120" height="80" rx="20" fill="url(#primaryGradient)" filter="url(#glow)"/>
+    <rect x="350" y="270" width="100" height="60" rx="15" fill="#0a0a0f" opacity="0.3"/>
+    
+    <!-- Server Lines -->
+    <line x1="360" y1="290" x2="420" y2="290" stroke="#6366f1" stroke-width="2" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="360" y1="305" x2="440" y2="305" stroke="#6366f1" stroke-width="2" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+    </line>
+    <line x1="360" y1="320" x2="400" y2="320" stroke="#6366f1" stroke-width="2" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" begin="0.4s"/>
+    </line>
+    
+    <!-- Server Icons -->
+    <circle cx="375" cy="285" r="3" fill="#06b6d4">
+        <animate attributeName="fill" values="#06b6d4;#10b981;#06b6d4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="390" cy="285" r="3" fill="#06b6d4">
+        <animate attributeName="fill" values="#06b6d4;#10b981;#06b6d4" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="405" cy="285" r="3" fill="#06b6d4">
+        <animate attributeName="fill" values="#06b6d4;#10b981;#06b6d4" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    
+    <!-- Floating Particles -->
+    <circle cx="150" cy="150" r="3" fill="#6366f1" opacity="0.5">
+        <animate attributeName="cy" values="150;130;150" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="450" r="2" fill="#06b6d4" opacity="0.6">
+        <animate attributeName="cy" values="450;470;450" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="500" r="4" fill="#f472b6" opacity="0.4">
+        <animate attributeName="cy" values="500;480;500" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="150" r="3" fill="#818cf8" opacity="0.5">
+        <animate attributeName="cy" values="150;170;150" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Cloud Shape -->
+    <g opacity="0.1" fill="white">
+        <circle cx="300" cy="350" r="50"/>
+        <circle cx="370" cy="340" r="60"/>
+        <circle cx="440" cy="350" r="50"/>
+        <circle cx="350" cy="370" r="40"/>
+        <circle cx="410" cy="370" r="40"/>
+    </g>
+</svg>
