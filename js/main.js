@@ -41,7 +41,7 @@ $(document).ready(function() {
         $(ripple).addClass('ripple');
         $(this).append(ripple);
         
-        let rect = $(this)[0](#citation-0).getBoundingClientRect();
+       let rect = $(this)[0].getBoundingClientRect();
         ripple.style.left = (e.clientX - rect.left) + 'px';
         ripple.style.top = (e.clientY - rect.top) + 'px';
         
@@ -75,7 +75,7 @@ $(document).ready(function() {
             $(this).text('0');
             
             $(window).scroll(function() {
-                if (isVisible($(this)[0](#citation-0), $(this))) {
+            if (isVisible($(this)[0], $(this))) {
                     countUp(this, num, 2000);
                 }
             });
@@ -150,7 +150,7 @@ $(document).ready(function() {
         setTimeout(function() {
             alert('Thank you! Your message has been sent.');
             submitBtn.html(originalText).prop('disabled', false);
-            $(this)[0](#citation-0).reset();
+         $(this)[0].reset();
         }, 2000);
     });
     

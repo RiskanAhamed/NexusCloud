@@ -267,7 +267,7 @@ function displayResults(results, query) {
     
     results.forEach(result => {
         let match = result.text().match(new RegExp(query, 'gi'));
-        let html = `<div class="result-item">${result[0](#citation-0)}</div>`;
+        let html = `<div class="result-item">${result[0]}</div>`;
         searchResults.append(html);
     });
     
@@ -302,7 +302,7 @@ if ('webkitSpeechRecognition' in window) {
         recognition.start();
         
         recognition.onresult = function(event) {
-            let command = event.results[0](#citation-0)[0](#citation-0).transcript.toLowerCase();
+          let command = event.results[0][0].transcript.toLowerCase();
             executeCommand(command);
         };
         
