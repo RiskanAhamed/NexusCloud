@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -92,18 +92,23 @@
             </div>
         </div>
         
-        <!-- Hero Visual - Floating Cloud Illustration -->
+        <!-- Hero Visual - Distributed Edge Network -->
         <div class="hero-visual">
             <div class="cloud-illustration">
-                <div class="orbit orbit-1">
-                    <div class="satellite satellite-1"></div>
-                </div>
-                <div class="orbit orbit-2">
-                    <div class="satellite satellite-2"></div>
-                </div>
-                <div class="orbit orbit-3">
-                    <div class="satellite satellite-3"></div>
-                </div>
+                <svg class="network-lines" viewBox="0 0 500 500">
+                    <line x1="250" y1="250" x2="250" y2="60" class="network-line" style="animation-delay:0s"/>
+                    <line x1="250" y1="250" x2="430" y2="160" class="network-line" style="animation-delay:0.4s"/>
+                    <line x1="250" y1="250" x2="430" y2="340" class="network-line" style="animation-delay:0.8s"/>
+                    <line x1="250" y1="250" x2="250" y2="440" class="network-line" style="animation-delay:1.2s"/>
+                    <line x1="250" y1="250" x2="70" y2="340" class="network-line" style="animation-delay:1.6s"/>
+                    <line x1="250" y1="250" x2="70" y2="160" class="network-line" style="animation-delay:2s"/>
+                </svg>
+                <div class="edge-node" style="top:60px; left:250px;"><span class="node-dot"></span>US-East</div>
+                <div class="edge-node" style="top:160px; left:430px;"><span class="node-dot"></span>EU-West</div>
+                <div class="edge-node" style="top:340px; left:430px;"><span class="node-dot"></span>AP-South</div>
+                <div class="edge-node" style="top:440px; left:250px;"><span class="node-dot"></span>SA-East</div>
+                <div class="edge-node" style="top:340px; left:70px;"><span class="node-dot"></span>AF-North</div>
+                <div class="edge-node" style="top:160px; left:70px;"><span class="node-dot"></span>AP-East</div>
                <div class="core-server">
     <img src="assets/images/hero-cloud.svg" alt="Cloud" class="hero-cloud-img">
     <div class="server-rings">

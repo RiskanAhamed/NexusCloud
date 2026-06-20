@@ -3,18 +3,19 @@
    ========================================== */
 
 :root {
-    --primary: #6366f1;
-    --primary-light: #818cf8;
-    --secondary: #06b6d4;
-    --accent: #f472b6;
-    --dark: #0a0a0f;
-    --darker: #050508;
-    --glass: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --text: #e2e8f0;
-    --text-muted: #94a3b8;
-    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-    --gradient-accent: linear-gradient(135deg, var(--primary), var(--accent));
+    --primary: #00d4ff;
+    --primary-light: #5ce1ff;
+    --secondary: #4f7cff;
+    --accent: #00d4ff;
+    --dark: #060810;
+    --darker: #03040a;
+    --glass: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(0, 212, 255, 0.15);
+    --text: #e8edf5;
+    --text-muted: #7a8699;
+    --gradient: linear-gradient(135deg, var(--secondary), var(--primary));
+    --gradient-accent: linear-gradient(135deg, var(--secondary), var(--primary));
+    --mono: 'JetBrains Mono', monospace;
 }
 
 *, *::before, *::after {
@@ -49,8 +50,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 /* Navigation */
@@ -70,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .floating-nav.scrolled {
     background: rgba(10, 10, 15, 0.95);
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 212, 255, 0.2);
 }
 
 .nav-container {
@@ -94,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-text {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
 }
@@ -146,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
 }
 
 .mobile-menu-btn {
@@ -234,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.4);
     color: white;
 }
 
@@ -284,7 +286,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-value {
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--mono);
+    letter-spacing: -0.02em;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text);
@@ -327,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 60px rgba(99, 102, 241, 0.5), 0 0 100px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 60px rgba(0, 212, 255, 0.4), 0 0 100px rgba(0, 212, 255, 0.25);
     animation: core-pulse 3s ease-in-out infinite;
     z-index: 10;
 }
@@ -341,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, transparent 70%);
     animation: glow-rotate 10s linear infinite;
 }
 
@@ -370,45 +373,50 @@ h1, h2, h3, h4, h5, h6 {
 .ring-2 { width: 350px; height: 350px; }
 .ring-3 { width: 450px; height: 450px; }
 
-.orbit {
+.network-lines {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.network-line {
+    stroke: var(--primary);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 6;
+    opacity: 0;
+    animation: line-flow 4s ease-in-out infinite;
+}
+
+.edge-node {
+    position: absolute;
     transform: translate(-50%, -50%);
-    border: 1px dashed rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(6, 8, 16, 0.85);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+}
+
+.node-dot {
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 8px var(--primary);
+    animation: pulse-glow 2s infinite;
 }
-
-.orbit-1 {
-    width: 300px;
-    height: 300px;
-    animation: orbit-rotate 20s linear infinite;
-}
-
-.orbit-2 {
-    width: 400px;
-    height: 400px;
-    animation: orbit-rotate 30s linear infinite reverse;
-}
-
-.orbit-3 {
-    width: 500px;
-    height: 500px;
-    animation: orbit-rotate 40s linear infinite;
-}
-
-.satellite {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: var(--gradient);
-    border-radius: 50%;
-    box-shadow: 0 0 20px var(--primary);
-}
-
-.satellite-1 { top: 0; left: 50%; transform: translateX(-50%); }
-.satellite-2 { top: 50%; right: 0; transform: translateY(-50%); }
-.satellite-3 { bottom: 0; left: 50%; transform: translateX(-50%); }
 
 /* Features Section */
 .features-section {
@@ -476,7 +484,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), transparent);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -484,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
 .feature-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2);
 }
 
 .feature-card:hover::before { opacity: 1; }
@@ -513,7 +521,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-tag {
     display: inline-block;
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(0, 212, 255, 0.2);
     color: var(--primary-light);
     padding: 5px 15px;
     border-radius: 20px;
@@ -524,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Dashboard Preview */
 .dashboard-preview {
     padding: 100px 5%;
-    background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.05), transparent);
+    background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.05), transparent);
 }
 
 .dashboard-mockup {
@@ -534,7 +542,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 100px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 100px rgba(0, 212, 255, 0.1);
 }
 
 .dashboard-header {
@@ -550,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
 }
 
@@ -609,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .metric-fill.memory {
-    background: linear-gradient(90deg, #06b6d4, #22d3ee);
+    background: linear-gradient(90deg, #4f7cff, #22d3ee);
 }
 
 .metric-fill.storage {
@@ -617,7 +625,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .metric-value {
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--mono);
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -674,7 +682,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .cloud {
     position: absolute;
-    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.1), transparent);
+    background: radial-gradient(ellipse, rgba(0, 212, 255, 0.1), transparent);
     border-radius: 50%;
     filter: blur(60px);
 }
@@ -724,7 +732,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-card:hover {
     transform: translateY(-15px);
     border-color: var(--primary);
-    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 30px 60px rgba(0, 212, 255, 0.2);
 }
 
 .service-visual { margin-bottom: 30px; }
@@ -791,7 +799,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     top: 0;
     left: 0;
-    background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1), transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.1), transparent 70%);
 }
 
 .section-header.light .section-title {
@@ -931,7 +939,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-cta-primary:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 20px 50px rgba(0, 212, 255, 0.4);
     color: white;
 }
 
@@ -984,7 +992,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
     color: var(--text);
