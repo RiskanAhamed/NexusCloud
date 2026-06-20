@@ -272,8 +272,8 @@ $(document).ready(function() {
     }
     
     // Console Easter Egg
-    console.log('%cNEXUS CLOUD', 'font-size: 30px; font-weight: bold; color: #6366f1;');
-    console.log('%cWelcome to the future of cloud computing!', 'font-size: 14px; color: #06b6d4;');
+    console.log('%cNEXUS CLOUD', 'font-size: 30px; font-weight: bold; color: #00d4ff;');
+    console.log('%cWelcome to the future of cloud computing!', 'font-size: 14px; color: #4f7cff;');
     
     // Performance Optimizations
     window.addEventListener('load', function() {
@@ -345,3 +345,4 @@ var nexusCloud = {
 };
 
 nexusCloud.init();
+

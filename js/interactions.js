@@ -298,7 +298,8 @@ if ('webkitSpeechRecognition' in window) {
     recognition.continuous = false;
     
     $('.voice-command').on('click', function() {
-        $(this).find('i').addClass('pulse');
+        let btn = $(this);
+        btn.find('i').addClass('pulse');
         recognition.start();
         
         recognition.onresult = function(event) {
@@ -307,7 +308,7 @@ if ('webkitSpeechRecognition' in window) {
         };
         
         recognition.onend = function() {
-            $(this).find('i').removeClass('pulse');
+            btn.find('i').removeClass('pulse');
         };
     });
 }
