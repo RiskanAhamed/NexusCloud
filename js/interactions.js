@@ -441,4 +441,11 @@ function handleSwipe(direction) {
     }
 }
 
+// Dashboard Sidebar - Active State Toggle
+$('.sidebar-menu a').on('click', function(e) {
+    e.preventDefault();
+    $('.sidebar-menu a').removeClass('active');
+    $(this).addClass('active');
+});
+
 console.log('✅ All interactions loaded successfully');

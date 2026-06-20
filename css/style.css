@@ -1118,3 +1118,38 @@ h1, h2, h3, h4, h5, h6 {
     .metrics-row { grid-template-columns: 1fr; }
 }
 
+
+/* Demo Modal */
+.demo-modal-content {
+    background: var(--darker);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    color: var(--text);
+}
+
+.demo-modal-content .modal-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+}
+
+.demo-modal-content .modal-title i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.demo-modal-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.demo-modal-content h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 10px;
+}
+
+.demo-modal-cta {
+    display: inline-flex;
+    margin-top: 15px;
+}
