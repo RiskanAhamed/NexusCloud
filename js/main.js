@@ -142,6 +142,7 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
         
+        let form = this;
         let submitBtn = $(this).find('button[type="submit"]');
         let originalText = submitBtn.html();
         
@@ -150,7 +151,7 @@ $(document).ready(function() {
         setTimeout(function() {
             alert('Thank you! Your message has been sent.');
             submitBtn.html(originalText).prop('disabled', false);
-         $(this)[0].reset();
+            form.reset();
         }, 2000);
     });
     
@@ -178,11 +179,12 @@ $(document).ready(function() {
     
     // Progress Bar Animation
     $('.progress-bar').each(function() {
-        let width = $(this).attr('data-width') || '0';
-        $(this).css('width', '0%');
+        let bar = $(this);
+        let width = bar.attr('data-width') || '0';
+        bar.css('width', '0%');
         
         setTimeout(function() {
-            $(this).animate({ width: width + '%' }, 1500);
+            bar.animate({ width: width + '%' }, 1500);
         }, 1000);
     });
     
@@ -343,4 +345,3 @@ var nexusCloud = {
 };
 
 nexusCloud.init();
-
