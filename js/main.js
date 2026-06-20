@@ -30,9 +30,16 @@ $(document).ready(function() {
         }
     });
     
-    // Mobile Menu Toggle
-    $('.mobile-menu-btn').click(function() {
+    // Mobile Menu Toggle (top nav links)
+    $('.mobile-menu-btn:not(.sidebar-toggle)').click(function() {
         $('.nav-links').slideToggle(400);
+    });
+
+    // Dashboard Sidebar Toggle (mobile)
+    $('.sidebar-toggle').click(function(e) {
+        e.stopPropagation();
+        $('.sidebar').toggleClass('mobile-show');
+        $('body').toggleClass('sidebar-open');
     });
     
     // Button Click Ripple Effect

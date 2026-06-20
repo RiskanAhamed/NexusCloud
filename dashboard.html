@@ -32,7 +32,7 @@
         .sidebar { width: 260px; background: rgba(10, 10, 15, 0.95); border-right: 1px solid var(--glass-border); padding: 30px 20px; position: fixed; height: 100vh; overflow-y: auto; }
         .sidebar-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; padding: 0 10px; }
         .sidebar-logo i { font-size: 1.8rem; color: var(--primary); }
-        .sidebar-logo span { font-family: 'Orbitron'; font-weight: 700; font-size: 1.1rem; }
+        .sidebar-logo span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; }
         .sidebar-menu { list-style: none; }
         .sidebar-menu li { margin-bottom: 8px; }
         .sidebar-menu a { display: flex; align-items: center; gap: 15px; padding: 14px 18px; border-radius: 12px; color: var(--text-muted); text-decoration: none; transition: all 0.3s; }
@@ -83,13 +83,31 @@
         .activity-icon.server { background: rgba(0, 212, 255, 0.2); color: var(--primary-light); }
         .activity-icon.database { background: rgba(16, 185, 129, 0.2); color: #10b981; }
         .activity-icon.security { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
-        .activity-icon.deploy { background: rgba(6, 182, 212, 0.2); color: #06b6d4; }
+        .activity-icon.deploy { background: rgba(79, 124, 255, 0.2); color: #4f7cff; }
         .activity-details { flex: 1; }
         .activity-title { font-weight: 500; margin-bottom: 3px; }
         .activity-time { font-size: 0.8rem; color: var(--text-muted); }
         .sidebar-toggle { display: none; }
         @media (max-width: 1200px) { .stats-overview { grid-template-columns: repeat(2, 1fr); } .dashboard-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 768px) { .sidebar { display: none; } .main-content { margin-left: 0; } .sidebar-toggle { display: block; } .stats-overview { grid-template-columns: 1fr; } .page-header { flex-direction: column; gap: 15px; align-items: flex-start; } .dash-search { width: 100%; } }
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .sidebar.mobile-show {
+                display: block;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 80%;
+                max-width: 300px;
+                height: calc(100vh - 70px);
+                z-index: 999;
+                box-shadow: 10px 0 40px rgba(0, 0, 0, 0.5);
+            }
+            .main-content { margin-left: 0; }
+            .sidebar-toggle { display: block; }
+            .stats-overview { grid-template-columns: 1fr; }
+            .page-header { flex-direction: column; gap: 15px; align-items: flex-start; }
+            .dash-search { width: 100%; }
+        }
     </style>
 </head>
 <body class="dark-theme">
